@@ -1,47 +1,59 @@
-# README.md
+# Django Architecture Boilerplate & Core Setup
 
-## Project Overview
-This repository contains the files for a Django Web Application titled "Proyecto_Hito_5_Levantando_tu_primer_proyecto_Django". T
+Este repositorio contiene una plantilla base (*boilerplate*) para el despliegue e inicialización de aplicaciones web robustas utilizando **Django** y **Python**. El objetivo principal de este proyecto es establecer una estructura monolítica limpia, configurar de forma segura el entorno de desarrollo y validar el ciclo de vida inicial del servidor siguiendo las mejores prácticas de la industria.
 
-## Tech Stack
-- **Programming Language**: Python
-- **Framework**: Django
+## 🚀 Capacidades Técnicas y Componentes
 
-## Files and Structure
-The following are the files present in this project:
+* **Inicialización de la Arquitectura:** Configuración del esqueleto base del proyecto mediante el CLI de Django (`django-admin`).
+* **Aislamiento de Entornos:** Configuración y uso de entornos virtuales para la gestión controlada de dependencias, evitando conflictos globales en el sistema.
+* **Ciclo de Vida del Servidor:** Configuración de los archivos nucleares (`settings.py`, `urls.py`, `wsgi.py`) para el correcto enrutamiento y levantamiento del servidor local.
+* **Estructura de Archivos Extensible:** Organización modular de carpetas preparada para la inyección progresiva de aplicaciones internas, modelos y vistas.
 
-### .gitignore
-A file used to specify patterns of files that should be ignored by version control systems like Git. It helps in managing unnecessary files during repository management.
+## 🛠️ Stack Tecnológico
 
-### onlyflans
-This directory likely contains specific application or data related to "onlyflans", which is referenced but not defined within the provided information.
+* **Lenguaje de Programación:** Python 3.x
+* **Framework Principal:** Django 4.x / 5.x
+* **Entorno Virtual:** `venv` / `virtualenv`
+* **Servidor de Desarrollo:** WSGI integrado de Django
 
-### requirements-onlyflans.txt
-A file listing all dependencies required for running this Django project, specifically tailored for the "onlyflans" context. This file should be used with `pip install -r requirements-onlyflans.txt` to install these dependencies in a virtual environment.
+## ⚙️ Configuración del Núcleo y Solución de Problemas
 
-## Usage
-To use and run this Django Web Application:
+El desarrollo se enfocó en resolver la configuración inicial que garantiza la escalabilidad de cualquier software web:
 
-1. Clone or download the repository.
-2. Navigate into the directory where the files are located.
-3. Create a virtual environment (optional but recommended for Python projects):
+1. **Gestión de Dependencias:** Creación del archivo `requirements.txt` para asegurar que el proyecto sea perfectamente replicable en cualquier entorno de desarrollo o servidores de Integración Continua (CI).
+2. **Estrategia de Debugging Inicial:** Configuración y control del entorno `DEBUG=True` en `settings.py` para la captura y resolución de errores HTTP iniciales durante la fase de desarrollo.
+3. **Control de Puertos y Host:** Validación del servidor web local contra direcciones seguras loops (`127.0.0.1` / `localhost`).
+
+## 🔧 Guía de Despliegue Local
+
+Sigue estos pasos detallados para inicializar y correr esta base de proyecto en tu máquina:
+
+1. **Clonar el repositorio:**
    ```bash
-   python -m venv env_name
-4. Activate the virtual environment:
-   - On Windows:
-     ```cmd
-     .\env_name\Scripts\activate
-   - On macOS and Linux:
-     ```bash
-     source env_name/bin/activate
-5. Install dependencies using `pip`:
-   ```bash
-   pip install -r requirements-onlyflans.txt
-6. Run the development server to test your application:
-   ```bash
+   git clone [https://github.com/longaresf/django-architecture-boilerplate.git](https://github.com/longaresf/django-architecture-boilerplate.git)
+   ```
+2. Ingresar al directorio:
+   Bash
+   cd django-architecture-boilerplate
+
+3. Crear y activar el entorno virtual:
+   Bash
+   python -m venv venv
+   source venv/bin/activate  # En Windows usa: venv\Scripts\activate
+
+4. Instalar el framework y dependencias:
+   Bash
+   pip install -r requirements.txt
+
+5. Ejecutar el servidor de desarrollo:
+   Bash
    python manage.py runserver
 
-This will start a local web server on `http://127.0.0.1:8000/`. You can then access this URL in your browser or use tools like Postman for testing.
+   Una vez ejecutado, abre tu navegador e ingresa a http://127.0.0.1:8000/ para comprobar el renderizado de la pantalla de bienvenida de Django.
 
-## Conclusion
-The repository contains the necessary files and dependencies to set up and run a Django Web Application. Ensure that all required dependencies are installed correctly, as specified in `requirements-onlyflans.txt`, before running the application.
+✒️ Créditos y Contexto Académico
+
+    Francisco Longares - Desarrollador Backend Python - longaresf
+
+    Este proyecto representa el hito práctico de inicialización y control de entornos del programa Full Stack Python de Desafío Latam.
+   
